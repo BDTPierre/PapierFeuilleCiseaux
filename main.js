@@ -1,5 +1,7 @@
 // Faire un shifumi contre l'utilisateur
 
+function replay() {
+
 let shifumi = ["Pierre", "Feuille", "Ciseaux"]
 let index = Math.floor(Math.random() * shifumi.length);
 console.log(index)
@@ -16,5 +18,12 @@ if (player === robot) {
     alert ("Dommage, vous avez perdu");
 }
 
+let infoplayer = window.confirm("Veux-tu rejouer ?")
+if(infoplayer === true){
+    replay ()
+} else {
+    alert("Merci d'avoir joué !") 
+}
+}
 
-
+replay()
